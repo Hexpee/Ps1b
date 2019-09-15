@@ -11,8 +11,9 @@ portionDownPayment = totalCost * 0.25
 currentSavings = 0
 r = 0.04
 months = 0
+monthlySalary=annualSalary/12
 while currentSavings < portionDownPayment:
-    currentSavings += (annualSalary/12)*portionSaved + currentSavings*(r/12)
+    currentSavings += (monthlySalary)*portionSaved + currentSavings*(r/12)
     months += 1
     if months%6 == 0:
         annualSalary += annualSalary * semiAnnualRaise
